@@ -1,4 +1,4 @@
-package LinearSearch;
+package linearSearch;
 
 /** 
  * LinearSearch 
