@@ -3,7 +3,7 @@ package binarySearch;
 /** 
  * BinarySearch 
  * 
- * Version 1.0
+ * Version 1.1
  *  
  * 2016/04/26
  * 
@@ -20,10 +20,10 @@ public class BinarySearch {
 		int[] array = { 0, 3, 9, 12, 15, 22, 36, 47, 53, 61 };
 
 		BinarySearch bs = new BinarySearch();
-		bs.binarySearch(array, 15);
+		bs.binarySearchMethod(array, 15);
 	}
 
-	public int binarySearch(int[] array, int value) {
+	public int binarySearchMethod(int[] array, int value) {
 		int begin = 0;
 		int end = array.length - 1;
 
