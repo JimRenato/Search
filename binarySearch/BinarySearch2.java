@@ -26,10 +26,7 @@ public class BinarySearch2 {
 		while (begin <= end) {
 			int middle = (begin + end) / 2;
 
-			if (array[middle].equalsIgnoreCase(name)) {
-				return "Foi encontrado o nome " + name + " no index " + String.valueOf(middle) + ".";
-			}
-			if (removeAcentos(array[middle]).equalsIgnoreCase(name)) {
+			if (array[middle].equalsIgnoreCase(name) || removeAcentos(array[middle]).equalsIgnoreCase(name)) {
 				return "Foi encontrado o nome " + name + " no index " + String.valueOf(middle) + ".";
 			}
 			if (name.compareToIgnoreCase(array[middle]) > 0) {
@@ -56,10 +53,7 @@ public class BinarySearch2 {
 
 	public static String removeAcentos(String str) {
 
-		str = Normalizer.normalize(str, Normalizer.Form.NFD);
-		str = str.replaceAll("[^\\p{ASCII}]", "");
-		return str;
-
+		return Normalizer.normalize(str, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
 	}
 
 	public static void inputName() {
@@ -72,14 +66,14 @@ public class BinarySearch2 {
 		String[] arrayOfNames = { "Abrão", "Abraão", "Aci", "Acira", "Ada", "Adail", "Adalberto", "Adália", "Adalgisa",
 				"Adalton", "Adamir", "Adamo", "Adão", "Adauto", "Adelaide", "Adélia", "Adelina", "Aline", "Ademar",
 				"Ademir", "Adina", "Adir", "Adira", "Ado", "Adolfo", "Adonias", "Adoniran", "Adônis", "Adriana",
-				"Adriane", "Adriano", "Aécio", "Afonso", "Altieres", "Ágata", "Agenor", "Agildo", "Agnaldo", "Agnelo",
+				"Adriane", "Adriano", "Aécio", "Afonso", "Altieres", "Agenor", "Agildo", "Agnaldo", "Agnelo",
 				"Aguinaldo", "Aída", "Aimoré", "Airumã", "Akira", "Alan", "Alba", "Alberico", "Albertina", "Alberto",
 				"Albino", "Alceu", "Alcina", "Alcione", "Alcindo", "Alcione", "Alda", "Aldir", "Aldo", "Aleixo",
 				"Alejandra", "Alexandre", "Alfeu", "Alfredo", "Alice", "Alícia", "Alina", "Aline", "Alípio", "Alma",
-				"Almeida", "Almir", "Almira", "Aloísio", "Altino", "Álvaro", "Alzira", "Amadeu", "Amador", "Amália",
-				"Amanda", "Amândio", "Amauri", "Aarão", "Arão", "Abaçaí", "Abacílio", "Abel", "Abelardo", "Abella",
-				"Abigail", "Abílio", "Abner", "Ambrósio", "Amélia", "América", "Américo", "Amílcar", "Amin", "Amir",
-				"Ana", "Anacleto", "Ananias", "Anastácia", "Balduíno", "Baltazar", "Bárbara", "Barnabé", "Bartolomeu",
+				"Almeida", "Almir", "Almira", "Aloísio", "Altino", "Alzira", "Amadeu", "Amador", "Amália", "Amanda",
+				"Amândio", "Amauri", "Aarão", "Arão", "Abaçaí", "Abacílio", "Abel", "Abelardo", "Abella", "Abigail",
+				"Abílio", "Abner", "Ambrósio", "Amélia", "América", "Américo", "Amílcar", "Amin", "Amir", "Ana",
+				"Anacleto", "Ananias", "Anastácia", "Balduíno", "Baltazar", "Bárbara", "Barnabé", "Bartolomeu",
 				"Baruque", "Basílio", "Batista", "Beatriz", "Benjamim", "Caio", "Calena", "Candido", "Carina", "Carla",
 				"Carlos", "Carmen", "Carol", "Carolina", "Cassiana", "Cassiano", "Cassilda", "Cássio", "Catarina",
 				"Cedar", "Célia", "Celina", "Celso", "Cátia", "Cecília", "Cesar", "Cibele", "Cícero", "Cíntia",
@@ -92,9 +86,9 @@ public class BinarySearch2 {
 				"Kelly", "Kaique", "Laura", "Luiza", "Lauro", "Lorenzo", "Milena", "Melissa", "Miguel", "Matheus",
 				"Nicolas", "Noah", "Natha", "Odete", "Ofélia", "Oliveira", "Otília", "Pietra", "Pérola", "Pietro",
 				"Pierre", "Quezia", "Queiroz", "Raissa", "Rayane", "Ryan", "Rafael", "Renato", "Samara", "Samuel",
-				"Sandro", "Thiago", "Téo", "Tales", "Talita", "Tainá", "Úrsula", "Úlima", "Uriel", "Ugo", "Vinícius",
-				"Vitor", "Valentina", "Verônica", "William", "Wesley", "Wilma", "Walesca", "Ximenes", "Xande", "Yago",
-				"Yuri", "Yara", "Yanni", "Zilda", "Zara", "Zaqueu", "Zeca" };
+				"Sandro", "Thiago", "Téo", "Tales", "Talita", "Tainá", "Úrsula", "Uriel", "Ugo", "Vinícius", "Vitor",
+				"Valentina", "Verônica", "William", "Wesley", "Wilma", "Walesca", "Ximenes", "Xande", "Yago", "Yuri",
+				"Yara", "Yanni", "Zilda", "Zara", "Zaqueu", "Zeca" };
 
 		orderArrayString(arrayOfNames);
 		inputName();
