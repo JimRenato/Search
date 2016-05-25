@@ -12,7 +12,7 @@ import java.util.Scanner;
  * 
  * @author Renato Souto Maior
  * 
- *         Implementation of Binary Search Method.
+ * Implementation of Binary Search Method.
  * 
  */
 
@@ -92,7 +92,7 @@ public class BinarySearch2 {
 
 		orderArrayString(arrayOfNames);
 		inputName();
-		String value = input.next();
+		String value = input.nextLine();
 		BinarySearch2 bs = new BinarySearch2();
 		String result = bs.binarySearchMethod(arrayOfNames, value);
 		System.out.println(result);
