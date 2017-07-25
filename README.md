@@ -1,6 +1,5 @@
 Search Methods
 =============
-------------------
 In computer science, a search algorithm is any algorithm which solves the Search problem, namely, to retrieve information stored within some data structure, or calculated in the search space of a problem domain. 
 
 In this repository I have created a simple Java applications with the implementation of the **BinarySearch** and **LinearSearch**.
